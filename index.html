@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+  // Define o tema (claro/escuro) antes da primeira renderização, evitando "flash" de cor errada.
+  (function () {
+    try {
+      var stored = localStorage.getItem('day-jeneffer-theme');
+      var theme = (stored === 'light' || stored === 'dark')
+        ? stored
+        : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    } catch (e) {
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
+  })();
+</script>
+<title>Day Jeneffer · Psicologia &amp; Desenvolvimento</title>
+<meta name="description" content="Terapia TCC e saúde mental online com a psicóloga Day Jeneffer (CRP 02/32601). Cuidado emocional com empatia, ciência e estratégia.">
+<link rel="icon" type="image/png" href="images/icon-color.png">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#FBFAF6">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0B1330">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#inicio">Pular para o conteúdo</a>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-header" id="topo">
+  <div class="container header-inner">
+    <a href="#inicio" class="brand" aria-label="Day Jeneffer — Psicologia & Desenvolvimento">
+      <img src="images/logo-navy.png" alt="Day Jeneffer · Psicologia & Desenvolvimento" class="brand-logo brand-logo-light">
+      <img src="images/logo-offwhite.png" alt="Day Jeneffer · Psicologia & Desenvolvimento" class="brand-logo brand-logo-dark">
+    </a>
+
+    <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+      <a href="#inicio">Início</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#tcc">TCC</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="theme-toggle" id="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Ativar modo escuro">
+        <span class="theme-toggle-track">
+          <span class="theme-toggle-icon theme-icon-sun" aria-hidden="true">☀</span>
+          <span class="theme-toggle-icon theme-icon-moon" aria-hidden="true">☾</span>
+          <span class="theme-toggle-thumb"></span>
+        </span>
+      </button>
+      <a class="btn btn-primary btn-small" href="https://wa.me/message/D4NGWHX6OOZJL1" target="_blank" rel="noopener noreferrer">
+        <svg class="icon-wpp" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.29-.15-1.71-.84-1.98-.94-.27-.1-.46-.15-.66.15-.2.29-.75.94-.92 1.13-.17.2-.34.22-.63.07-.29-.15-1.22-.45-2.32-1.43-.86-.76-1.44-1.71-1.61-2-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.51-.07-.15-.66-1.59-.9-2.18-.24-.57-.48-.49-.66-.5h-.56c-.2 0-.51.07-.78.37-.27.29-1.02 1-1.02 2.44s1.05 2.83 1.19 3.02c.15.2 2.06 3.15 5 4.41.7.3 1.24.48 1.67.62.7.22 1.34.19 1.84.12.56-.08 1.71-.7 1.96-1.38.24-.68.24-1.25.17-1.38-.07-.12-.26-.19-.55-.34z"/><path d="M12.02 2C6.5 2 2.03 6.44 2 11.9c0 1.87.5 3.66 1.42 5.24L2 22l4.99-1.31a10.02 10.02 0 0 0 5.03 1.35h.01c5.52 0 9.99-4.44 10.02-9.9.01-2.64-1.02-5.13-2.9-6.99A9.98 9.98 0 0 0 12.02 2zm0 18.11h-.01a8.3 8.3 0 0 1-4.24-1.16l-.3-.18-2.96.78.79-2.87-.2-.3a8.19 8.19 0 0 1-1.28-4.44c.02-4.52 3.71-8.19 8.24-8.19 2.2 0 4.27.86 5.82 2.41a8.09 8.09 0 0 1 2.4 5.76c-.02 4.52-3.71 8.19-8.26 8.19z"/></svg>
+        <span>Agendar pelo WhatsApp</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="inicio">
+    <div class="hero-blob" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <div class="badges">
+          <span class="badge">Psicóloga · CRP 02/32601</span>
+          <span class="badge">Atendimento 100% online</span>
+        </div>
+
+        <h1>Terapia TCC<br><span>Saúde Mental Online</span></h1>
+
+        <p class="hero-lead">Cuidado emocional com empatia, ciência e estratégia 🌱</p>
+
+        <p class="hero-tags">Ansiedade&nbsp;•&nbsp;Estresse&nbsp;•&nbsp;Autoconhecimento</p>
+
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="https://wa.me/message/D4NGWHX6OOZJL1" target="_blank" rel="noopener noreferrer">
+            <svg class="icon-wpp" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.29-.15-1.71-.84-1.98-.94-.27-.1-.46-.15-.66.15-.2.29-.75.94-.92 1.13-.17.2-.34.22-.63.07-.29-.15-1.22-.45-2.32-1.43-.86-.76-1.44-1.71-1.61-2-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.51-.07-.15-.66-1.59-.9-2.18-.24-.57-.48-.49-.66-.5h-.56c-.2 0-.51.07-.78.37-.27.29-1.02 1-1.02 2.44s1.05 2.83 1.19 3.02c.15.2 2.06 3.15 5 4.41.7.3 1.24.48 1.67.62.7.22 1.34.19 1.84.12.56-.08 1.71-.7 1.96-1.38.24-.68.24-1.25.17-1.38-.07-.12-.26-.19-.55-.34z"/><path d="M12.02 2C6.5 2 2.03 6.44 2 11.9c0 1.87.5 3.66 1.42 5.24L2 22l4.99-1.31a10.02 10.02 0 0 0 5.03 1.35h.01c5.52 0 9.99-4.44 10.02-9.9.01-2.64-1.02-5.13-2.9-6.99A9.98 9.98 0 0 0 12.02 2zm0 18.11h-.01a8.3 8.3 0 0 1-4.24-1.16l-.3-.18-2.96.78.79-2.87-.2-.3a8.19 8.19 0 0 1-1.28-4.44c.02-4.52 3.71-8.19 8.24-8.19 2.2 0 4.27.86 5.82 2.41a8.09 8.09 0 0 1 2.4 5.76c-.02 4.52-3.71 8.19-8.26 8.19z"/></svg>
+            <span>Agendar pelo WhatsApp</span>
+          </a>
+          <a class="btn btn-ghost" href="#sobre">Conheça meu trabalho</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="photo-wrap">
+          <div class="hero-photo-frame">
+            <img src="images/foto-day.jpg" alt="Day Jeneffer, psicóloga · CRP 02/32601" class="hero-photo">
+          </div>
+          <span class="photo-badge" aria-hidden="true">
+            <img src="images/icon-color.png" alt="">
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SOBRE ===================== -->
+  <section class="sobre" id="sobre">
+    <div class="container section-grid">
+      <div class="section-visual">
+        <div class="photo-wrap">
+          <div class="about-photo-frame">
+            <img src="images/foto-day.jpg" alt="Day Jeneffer, psicóloga · CRP 02/32601" class="about-photo">
+          </div>
+          <span class="photo-badge" aria-hidden="true">
+            <img src="images/icon-color.png" alt="">
+          </span>
+        </div>
+        <p class="about-caption">“Um espaço de escuta, ciência e cuidado — para você se sentir à vontade em cada sessão.”</p>
+      </div>
+
+      <div class="section-copy">
+        <span class="eyebrow">Sobre</span>
+        <h2>Um espaço de escuta, ciência e cuidado</h2>
+        <p>Sou Day Jeneffer, psicóloga (CRP 02/32601) especializada em Terapia Cognitivo-Comportamental, com atendimento 100% online. Acredito em um cuidado que une técnica e empatia: um espaço seguro para você se olhar com mais clareza, entender seus padrões de pensamento e construir, no seu tempo, formas mais leves de lidar com a vida.</p>
+        <p>Trabalho principalmente com ansiedade, estresse e processos de autoconhecimento, sempre com base em evidências científicas e em uma escuta atenta e sem julgamentos.</p>
+        <ul class="value-list">
+          <li>Abordagem baseada em evidências (TCC)</li>
+          <li>Sigilo e ética profissional</li>
+          <li>Atendimento online, de onde você estiver</li>
+        </ul>
+        <a class="link-arrow" href="#tcc">Entenda como a TCC pode ajudar →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TCC ===================== -->
+  <section class="tcc" id="tcc">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">TCC</span>
+        <h2>O que é a Terapia Cognitivo-Comportamental</h2>
+        <p class="section-lead">A TCC é uma abordagem prática e estruturada, com eficácia amplamente comprovada, que ajuda você a identificar pensamentos e comportamentos que mantêm o sofrimento — e a construir novas formas de reagir a eles.</p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-icon">🧠</div>
+          <h3>Ansiedade</h3>
+          <p>Compreenda os gatilhos, reduza a intensidade das crises e recupere a sensação de controle sobre seus pensamentos.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🌊</div>
+          <h3>Estresse</h3>
+          <p>Ferramentas práticas para lidar com sobrecarga do dia a dia, cobranças e rotinas exigentes com mais equilíbrio.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🌱</div>
+          <h3>Autoconhecimento</h3>
+          <p>Um processo de escuta interna que ajuda a entender padrões, crenças e escolhas — com mais clareza sobre quem você é.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== COMO FUNCIONA ===================== -->
+  <section class="como-funciona" id="como-funciona">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Como funciona</span>
+        <h2>Do primeiro contato à sua sessão</h2>
+        <p class="section-lead">Um processo simples, pensado para que você se sinta acolhido desde a primeira mensagem.</p>
+      </div>
+
+      <ol class="steps">
+        <li class="step">
+          <span class="step-number">1</span>
+          <h3>Chame no WhatsApp</h3>
+          <p>Conte um pouco sobre o que te motivou a buscar terapia e tire suas dúvidas iniciais.</p>
+        </li>
+        <li class="step">
+          <span class="step-number">2</span>
+          <h3>Sessão de acolhimento</h3>
+          <p>Nos conhecemos, entendo sua história e definimos juntas os objetivos do processo terapêutico.</p>
+        </li>
+        <li class="step">
+          <span class="step-number">3</span>
+          <h3>Plano em TCC</h3>
+          <p>Construímos um plano terapêutico personalizado, com técnicas de Terapia Cognitivo-Comportamental.</p>
+        </li>
+        <li class="step">
+          <span class="step-number">4</span>
+          <h3>Acompanhamento online</h3>
+          <p>Sessões regulares, 100% online, com espaço para ajustar o processo conforme sua evolução.</p>
+        </li>
+      </ol>
+
+      <div class="como-funciona-cta">
+        <a class="btn btn-primary" href="https://wa.me/message/D4NGWHX6OOZJL1" target="_blank" rel="noopener noreferrer">Tenho interesse em iniciar terapia</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SOCIAL / INSTAGRAM ===================== -->
+  <section class="social">
+    <div class="container social-inner">
+      <svg class="icon-ig" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.97.24 2.43.4a4.9 4.9 0 0 1 1.77 1.15 4.9 4.9 0 0 1 1.15 1.77c.16.46.35 1.26.4 2.43.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.24 1.97-.4 2.43a4.9 4.9 0 0 1-1.15 1.77 4.9 4.9 0 0 1-1.77 1.15c-.46.16-1.26.35-2.43.4-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.97-.24-2.43-.4a4.9 4.9 0 0 1-1.77-1.15 4.9 4.9 0 0 1-1.15-1.77c-.16-.46-.35-1.26-.4-2.43C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.24-1.97.4-2.43a4.9 4.9 0 0 1 1.15-1.77A4.9 4.9 0 0 1 5.59 1.8c.46-.16 1.26-.35 2.43-.4C9.29 1.34 9.67 1.33 12 1.33Zm0 1.8c-3.16 0-3.52.01-4.76.07-1.14.05-1.76.24-2.17.39a3.1 3.1 0 0 0-1.15.74 3.1 3.1 0 0 0-.74 1.15c-.15.41-.34 1.03-.39 2.17-.06 1.24-.07 1.6-.07 4.76s.01 3.52.07 4.76c.05 1.14.24 1.76.39 2.17.14.36.32.68.74 1.15.36.36.68.6 1.15.74.41.15 1.03.34 2.17.39 1.24.06 1.6.07 4.76.07s3.52-.01 4.76-.07c1.14-.05 1.76-.24 2.17-.39a3.1 3.1 0 0 0 1.15-.74c.36-.36.6-.68.74-1.15.15-.41.34-1.03.39-2.17.06-1.24.07-1.6.07-4.76s-.01-3.52-.07-4.76c-.05-1.14-.24-1.76-.39-2.17a3.1 3.1 0 0 0-.74-1.15 3.1 3.1 0 0 0-1.15-.74c-.41-.15-1.03-.34-2.17-.39-1.24-.06-1.6-.07-4.76-.07Zm0 3.24a4.76 4.76 0 1 1 0 9.52 4.76 4.76 0 0 1 0-9.52Zm0 1.8a2.96 2.96 0 1 0 0 5.92 2.96 2.96 0 0 0 0-5.92Zm4.95-1.98a1.11 1.11 0 1 1 0 2.22 1.11 1.11 0 0 1 0-2.22Z"/></svg>
+      <p class="social-lead">Conteúdos sobre saúde mental, TCC e autoconhecimento.</p>
+      <a class="link-underline" href="https://www.instagram.com/psidayjeneffer/" target="_blank" rel="noopener noreferrer">@psidayjeneffer</a>
+      <a class="btn btn-outline" href="https://www.instagram.com/psidayjeneffer/" target="_blank" rel="noopener noreferrer">Conheça meu Instagram</a>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">FAQ</span>
+        <h2>Perguntas frequentes</h2>
+      </div>
+
+      <div class="accordion">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Como funciona o atendimento online?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>As sessões acontecem por videochamada, em uma plataforma segura, no dia e horário combinados. Você só precisa de um espaço reservado e conexão com a internet.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            A terapia online é tão eficaz quanto a presencial?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Sim. Estudos mostram equivalência de resultados entre os formatos, e a TCC costuma se adaptar muito bem ao modelo online, mantendo a mesma qualidade de escuta e acompanhamento.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Quanto tempo dura cada sessão e qual a frequência?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>As sessões costumam ter cerca de 50 minutos, geralmente semanais. A frequência ideal é definida junto com você, de acordo com suas necessidades no processo.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Como faço para agendar minha primeira consulta?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>É simples: basta enviar uma mensagem pelo WhatsApp. A partir daí, conversamos sobre disponibilidade, valores e como funciona o início do acompanhamento.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Preciso ter um diagnóstico prévio para iniciar a terapia?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Não. Você não precisa chegar com um diagnóstico fechado — muitas pessoas iniciam a terapia justamente para entender melhor o que sentem. Esse entendimento faz parte do processo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA FINAL ===================== -->
+  <section class="cta-final">
+    <div class="hero-blob cta-blob" aria-hidden="true"></div>
+    <div class="container cta-final-inner">
+      <h2>Talvez o próximo passo seja simplesmente conversar.</h2>
+      <p>Se você sente que está na hora de olhar para si com mais cuidado, entre em contato.</p>
+      <a class="btn btn-primary btn-lg" href="https://wa.me/message/D4NGWHX6OOZJL1" target="_blank" rel="noopener noreferrer">
+        <svg class="icon-wpp" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.29-.15-1.71-.84-1.98-.94-.27-.1-.46-.15-.66.15-.2.29-.75.94-.92 1.13-.17.2-.34.22-.63.07-.29-.15-1.22-.45-2.32-1.43-.86-.76-1.44-1.71-1.61-2-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.51-.07-.15-.66-1.59-.9-2.18-.24-.57-.48-.49-.66-.5h-.56c-.2 0-.51.07-.78.37-.27.29-1.02 1-1.02 2.44s1.05 2.83 1.19 3.02c.15.2 2.06 3.15 5 4.41.7.3 1.24.48 1.67.62.7.22 1.34.19 1.84.12.56-.08 1.71-.7 1.96-1.38.24-.68.24-1.25.17-1.38-.07-.12-.26-.19-.55-.34z"/><path d="M12.02 2C6.5 2 2.03 6.44 2 11.9c0 1.87.5 3.66 1.42 5.24L2 22l4.99-1.31a10.02 10.02 0 0 0 5.03 1.35h.01c5.52 0 9.99-4.44 10.02-9.9.01-2.64-1.02-5.13-2.9-6.99A9.98 9.98 0 0 0 12.02 2zm0 18.11h-.01a8.3 8.3 0 0 1-4.24-1.16l-.3-.18-2.96.78.79-2.87-.2-.3a8.19 8.19 0 0 1-1.28-4.44c.02-4.52 3.71-8.19 8.24-8.19 2.2 0 4.27.86 5.82 2.41a8.09 8.09 0 0 1 2.4 5.76c-.02 4.52-3.71 8.19-8.26 8.19z"/></svg>
+        <span>Conversar pelo WhatsApp</span>
+      </a>
+      <p class="cta-secondary">Ou acompanhe meu trabalho no Instagram<br>
+        <a class="link-underline" href="https://www.instagram.com/psidayjeneffer/" target="_blank" rel="noopener noreferrer">@psidayjeneffer</a>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img src="images/logo-offwhite.png" alt="Day Jeneffer · Psicologia & Desenvolvimento" class="footer-logo">
+      <p>Psicóloga · CRP 02/32601</p>
+      <p>Atendimento 100% online</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>WhatsApp</h4>
+      <a href="https://wa.me/message/D4NGWHX6OOZJL1" target="_blank" rel="noopener noreferrer">Agendar atendimento</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Instagram</h4>
+      <a href="https://www.instagram.com/psidayjeneffer/" target="_blank" rel="noopener noreferrer">@psidayjeneffer</a>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p class="disclaimer">Este site possui caráter informativo e não substitui avaliação psicológica.</p>
+    <p class="copyright">© 2026 Day Jeneffer. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<!-- ===================== BOTÃO FLUTUANTE WHATSAPP ===================== -->
+<a class="wpp-float" href="https://wa.me/message/D4NGWHX6OOZJL1" target="_blank" rel="noopener noreferrer" aria-label="Fale comigo pelo WhatsApp">
+  <svg class="icon-wpp" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.29-.15-1.71-.84-1.98-.94-.27-.1-.46-.15-.66.15-.2.29-.75.94-.92 1.13-.17.2-.34.22-.63.07-.29-.15-1.22-.45-2.32-1.43-.86-.76-1.44-1.71-1.61-2-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.51-.07-.15-.66-1.59-.9-2.18-.24-.57-.48-.49-.66-.5h-.56c-.2 0-.51.07-.78.37-.27.29-1.02 1-1.02 2.44s1.05 2.83 1.19 3.02c.15.2 2.06 3.15 5 4.41.7.3 1.24.48 1.67.62.7.22 1.34.19 1.84.12.56-.08 1.71-.7 1.96-1.38.24-.68.24-1.25.17-1.38-.07-.12-.26-.19-.55-.34z"/><path d="M12.02 2C6.5 2 2.03 6.44 2 11.9c0 1.87.5 3.66 1.42 5.24L2 22l4.99-1.31a10.02 10.02 0 0 0 5.03 1.35h.01c5.52 0 9.99-4.44 10.02-9.9.01-2.64-1.02-5.13-2.9-6.99A9.98 9.98 0 0 0 12.02 2zm0 18.11h-.01a8.3 8.3 0 0 1-4.24-1.16l-.3-.18-2.96.78.79-2.87-.2-.3a8.19 8.19 0 0 1-1.28-4.44c.02-4.52 3.71-8.19 8.24-8.19 2.2 0 4.27.86 5.82 2.41a8.09 8.09 0 0 1 2.4 5.76c-.02 4.52-3.71 8.19-8.26 8.19z"/></svg>
+  <span>Fale comigo</span>
+</a>
+
+<script src="js/script.js"></script>
+</body>
+</html>
